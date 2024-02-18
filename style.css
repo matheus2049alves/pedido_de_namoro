@@ -49,12 +49,16 @@ button {
   display: none;
 }
 
-.heart img {
-  width: 30rem;
-  animation: heart-animation 1.4s backwards;
+.heart {
+  animation: heart-motion 1.4s backwards;
 }
 
-@keyframes heart-animation {
+.heart img {
+  width: 30rem;
+  animation: heart-animation 300ms infinite backwards
+}
+
+@keyframes heart-motion {
   from {
     transform: translateY(15rem) scale(.1);
   }
@@ -62,4 +66,14 @@ button {
   to {
     transform: translateY(0) scale(1);
   }
+}
+
+
+@keyframes heart-animation {
+  0% {transform: translate(0)  rotate(1deg);}
+  20% {transform: translate(1px, -1px) rotate(-1deg);}
+  40% {transform: translate(-2px, 2px) rotate(1deg);}
+  60% {transform: translate(-3px, -3px) rotate(-2deg);}
+  80% {transform: translate(3px,-3px) rotate(2deg);}
+  100% {transform:translate(0) rotate(-2.5deg);}
 }
