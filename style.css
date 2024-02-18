@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: pink;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-family: "Dancing Script", cursive;
+}
+
+button {
+  border: none;
+  width: 10rem;
+  height: 5rem;
+  border-radius: 1rem;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+
+}
+
+.chose-not {
+  background-color: rgb(238, 61, 61);
+  cursor: pointer;
+}
+
+.chose-yes {
+  background-color: aqua;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.heart img {
+  width: 30rem;
+  animation: heart-animation 1.4s backwards;
+}
+
+@keyframes heart-animation {
+  from {
+    transform: translateY(15rem) scale(.1);
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
